@@ -4,29 +4,32 @@ block content
 
     h1= title
     h1 Welcome to My Journal
-    h2 Sign to My Journal please
     b
-    form#formAddUser(name="adduser",method="post",action="/adduser")
-        input#inputUserName(type="text", placeholder="username", name="username")
-        input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
-        input#inputUserMessage(type="text", placeholder="usermessage", name="usermessage")
-        button#btnSubmit(type="submit") submit
-
-        table.table.table-striped
+    form#formAddUser(name="adduser",method="post",action="/adduser") 
+        //- input#inputUserName(type="text", placeholder="username", name="username")
+        //- input#inputUserEmail(type="text", placeholder="useremail", name="useremail")
+        input#inputUserDate(type="text", placeholder="mm/dd/yyyy", name="userdate") 
+        input#inputUserMessage(type="text", placeholder="Type your message here", name="usermessage") 
+        button#btnSubmit(type="submit") Submit
+        
+        
+      .tablestyle  
+        table.table.table-hover
           thead
-             tr
-               td Name
-               td Email
+             tr    
+               td Date
                td Message
+               td 
                td
            tbody
              each user, i in userlist
               tr
-                 td
                    a(href="/#{user._id}/usermessage")= user.username
                  td
-                   =user.email
+                   =user.userdate
                  td
                    =user.message
+                 td
+                   a.btn.btn-primary(href="/#{user._id}/usermessage") View Entry
                  td
                    a.btn.btn-danger(href="/#{user._id}") Delete

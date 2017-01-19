@@ -1,33 +1,81 @@
 body {
   padding: 50px;
   font: 20px "Times New Roman", Helvetica, Arial, sans-serif !important;
-  background-color: lightblue !important;
+  color: black !important;
+  /*background-color: lightblue !important;*/
+  background-image: url("/images/Journal.jpg");
+  background-size: contain;
+  background-size :100%;
 
 }
 h1{
-
-   color: blue !important;
-   font-family: verdana !important;
-   font-size: 200%;
-
+   color: black !important;
+   font-size: 50px !important;
+   font-family: zapfino !important;
+   text-shadow: 2px 2px #ff0000;
+   line-height: 190% !important;
 }
+
+.tablestyle {
+  background: rgba(255, 243, 204, 0.7) !important;
+  border-radius: 7px !important;
+}
+
+.messagetable{
+  margin-top: 100px;
+  background: rgba(255, 243, 204, 0.7) !important;
+  border-radius: 7px !important;
+  font-family: zapfino !important;
+  text-align: center !important;
+  margin-left: 20px;
+}
+
+.tablestyle:hover {
+  /*background: rgba(255, 0, 0, 0.5);*/
+}
+
 h2{
+     /*color: blue !important;*/
+     font-family: zapfino !important;
+     font-size: 80px !important;
+     text-shadow: 5px 3px #ff0000;
+     /*padding-top: 40px;*/
+     text-align: center;
+     line-height: 150% !important;
 
-   color: blue !important;
-   font-family: verdana !important;
-   font-size: 200%;
-
-}
+  }
 
 a {
   color: #00B7FF;
 }
 
-table {
+#inputUserDate{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
 
+#inputUserMessage{
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+#btnSubmit{
+  margin: 8px;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+input {
+  background-color: white;
+}
+
+table {
   margin-top: 80px;
 }
 
 form{
   margin-top: 50px;
+  color: black;
 }

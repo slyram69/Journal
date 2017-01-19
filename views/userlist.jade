@@ -4,21 +4,21 @@ block content
 
   p Journal Entries
 
-
+ 
    table
      thead
         tr
-          td Name
-          td Email
+          td Date 
+          //- td Email
           td Message
           td
       tbody
         each user, i in userlist
          tr
             td
-              =user.name
-            td
-              =user.email
+              =user.date
+            //- td
+            //-   =user.email
             td
               =user.message
             td

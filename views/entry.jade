@@ -1,0 +1,24 @@
+extends layout
+
+block content
+
+    h1= title
+    h2 Journal Entry
+    //- h2 Sign to My Journal please
+    b
+        
+        
+      .tablestyle  
+        table.table.table-hover
+
+           tbody
+             each user, i in userlist
+              tr
+                   a(href="/#{user._id}/usermessage")= user.username
+                 td 
+                    =user.userdate
+                 td
+                   =user.message
+                 td
+                   i.fa.fa-window-close-o(aria-hidden='true')
+                   a.btn.btn-danger(href="/#{user._id}") Delete
